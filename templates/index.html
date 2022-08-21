@@ -1,35 +1,26 @@
-{% include 'header.html' %} 
-
-  <main>
-    <section class="container pt-5">
-      <h1 class="pb-3 text-center">Pixela Reading</h1>
-      <div class="row">
-        <div class="col m-2">
-          <a href="{{url_for('create_graph')}}" class="btn btn-primary p-4">Create graph</a>
-        </div>
-        <div class="col m-2">
-          <a href="{{url_for('create_pixel')}}" class="btn btn-success p-4">Create pixel</a>
-        </div>
-        <div class="col m-2">
-          <a href="{{url_for('update_pixel')}}" class="btn btn-warning p-4">Update pixel</a>
-        </div>
-        <div class="col m-2">
-          <a href="{{url_for('delete_pixel')}}" class="btn btn-danger p-4">Delete pixel</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+  <main class="container">
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="pb-5">Welcome!</h1>
+      <div class="col-lg-6 mx-auto w-50">  
+        <div class="d-grid gap-2 d-flex justify-content-sm-center flex-column">
+          <a class="btn btn-primary btn-lg px-4 gap-3" href="{{url_for('login')}}">Login</a>
+          <a class="btn btn-outline-secondary btn-lg px-4" href="{{url_for('signup')}}">SignUp</a>
         </div>
       </div>
-
-      <h2 class="pt-5 text-center text-warning">{{message}}</h2>
-      <div class="d-flex align-items-center flex-column">
-        <a href="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.html" class="link-primary pb-3">View Graph</a>
-      <img class="img-fluid"  src="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.svg" alt="Graph">
-      </div>
-    </section>
+    </div>
   </main>
-
   <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
-
 </html>

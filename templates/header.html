@@ -13,9 +13,10 @@
 
 <body>
   <header>
-    <nav class="navbar bg-light text-start d-block">
-      <div class="container-fluid">
+    <nav class="navbar bg-light">
+      <div class="container-fluid d-flex justify-content-between w-75">
         <a class="navbar-brand" href="{{ url_for('home')}}">Home</a>
-      </div>
+        <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+        </div>
     </nav>
   </header>
