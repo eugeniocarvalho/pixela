@@ -85,7 +85,7 @@ def admin_only(f):
 
 @app.route('/')
 def home():
-  return render_template('index.html', user=current_user)
+  return render_template('dashboard.html', user=current_user)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -140,7 +140,6 @@ def signup():
   # return render_template("signup.html", form=form, user=current_user)
 
 @app.route('/dashboard')
-@login_required
 def dashboard():
   return render_template('dashboard.html', user=current_user)
 

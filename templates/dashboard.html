@@ -1,4 +1,7 @@
+{% extends "bootstrap/base.html" %}
 {% include 'header.html' %} 
+
+{% block content %}
 
   <main>
     <section class="container pt-5">
@@ -19,10 +22,12 @@
       </div>
 
       <h2 class="pt-5 text-center text-warning">{{message}}</h2>
+      {% if user.is_authenticated: %}
       <div class="d-flex align-items-center flex-column">
         <a href="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.html" class="link-primary pb-3">View Graph</a>
       <img class="img-fluid"  src="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.svg" alt="Graph">
       </div>
+      {% endif %}
     </section>
   </main>
 
@@ -31,5 +36,6 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
 </body>
+{% endblock %}
 
 </html>
