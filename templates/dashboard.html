@@ -1,40 +1,45 @@
 {% extends "bootstrap/base.html" %}
-{% include 'header.html' %} 
+{% include 'header.html' %}
 
 {% block content %}
 
-  <main>
-    <section class="container pt-5">
-      <h1 class="pb-3 text-center">Pixela Reading</h1>
-      <div class="row p-0 ms-auto me-auto text-center">
-        <div class="col m-2">
-          <a href="{{url_for('create_graph')}}" class="btn btn-primary p-4">Create graph</a>
-        </div>
-        <div class="col m-2">
-          <a href="{{url_for('create_pixel')}}" class="btn btn-success p-4">Create pixel</a>
-        </div>
-        <div class="col m-2">
-          <a href="{{url_for('update_pixel')}}" class="btn btn-warning p-4">Update pixel</a>
-        </div>
-        <div class="col m-2">
-          <a href="{{url_for('delete_pixel')}}" class="btn btn-danger p-4">Delete pixel</a>
-        </div>
+<main>
+  <section class="container pt-5">
+    <h1 class="pb-3 text-center">Pixela Reading</h1>
+    <div class="row p-0 ms-auto me-auto text-center">
+      <div class="col m-2">
+        <a href="{{url_for('create_graph')}}" class="btn btn-primary p-4">Create graph</a>
       </div>
-
-      <h2 class="pt-5 text-center text-warning">{{message}}</h2>
-      {% if user.is_authenticated: %}
-      <div class="d-flex align-items-center flex-column">
-        <a href="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.html" class="link-primary pb-3">View Graph</a>
-      <img class="img-fluid"  src="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.svg" alt="Graph">
+      <div class="col m-2">
+        <a href="{{url_for('create_pixel')}}" class="btn btn-success p-4">Create pixel</a>
       </div>
-      {% endif %}
-    </section>
-  </main>
+      <div class="col m-2">
+        <a href="{{url_for('update_pixel')}}" class="btn btn-warning p-4">Update pixel</a>
+      </div>
+      <div class="col m-2">
+        <a href="{{url_for('delete_pixel')}}" class="btn btn-danger p-4">Delete pixel</a>
+      </div>
+    </div>
 
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+    <h2 class="pt-5 text-center text-warning">{{message}}</h2>
+    {% if user.is_authenticated: %}
+    <div class="d-flex align-items-center flex-column">
+      <a href="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.html" class="link-primary pb-3">View Graph</a>
+    </div>
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item h-50 bg-transparent" style="background-color: #FFFFFF" frameborder="0"
+        src="https://pixe.la/v1/users/eugeniocarvalho/graphs/graph1.html?mode=simple"></iframe>
+    </div>
+    {% endif %}
+
+  </section>
+
+</main>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 {% endblock %}
 
